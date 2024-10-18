@@ -11,5 +11,9 @@ path_cb_84x84 = f"{assets_dir}/checkerboard_84x84.jpeg"
 # print in black/white pixel values in 2d py array
 cb_18x18_image = cv2.imread(path_cb_18x18, 0)
 cb_84x84_image = cv2.imread(path_cb_84x84, 0)
-print(cb_84x84_image)
+
+# print image attributes: size as (h,w)
+print(cb_18x18_image.shape)
+print(cb_84x84_image.shape)
+
 
