@@ -17,7 +17,13 @@ coca_image = cv2.imread(path_coca, 1)
 # print image attributes: size as (h,w)
 # print(cb_18x18_image.shape)
 # print(cb_84x84_image.shape)
+print(coca_image.shape)
 
 # display image using matplotlib
-plt.imshow(cb_84x84_image, cmap="gray")
+# plt.imshow(cb_84x84_image, cmap="gray")
+
+# fix - matplot expects RGB, opencv expects BGR, reverse the color channels
+coca_image_reverse_channels = coca_image[:, :, ::-1]
+plt.imshow(coca_image_reverse_channels)
+
 plt.show()
